@@ -1,5 +1,9 @@
 import { uuid } from 'uuidv4';
 
+
+export const TypesTransaction = new Array('income', 'outcome')
+
+
 class Transaction {
   id: string;
 
@@ -7,13 +11,13 @@ class Transaction {
 
   value: number;
 
-  type: 'income' | 'outcome';
+  type: 'income' | 'outcome'
 
-  constructor({ title, value, type }: Omit<Transaction, 'id'>) {
+  constructor(data:Omit<Transaction, 'id'>) {
     this.id = uuid();
-    this.title = title;
-    this.value = value;
-    this.type = type;
+    this.title = data.title;
+    this.value = data.value;
+    this.type = data.type;
   }
 }
 

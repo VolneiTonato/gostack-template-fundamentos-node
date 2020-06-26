@@ -12,6 +12,7 @@
       "name": "Debug",
       "skipFiles": ["<node_internals>/**"],
       "outFiles": ["${workspaceFolder}/**/*.js"]
-    }
-  ]
+
+    },
+  ],
 }
